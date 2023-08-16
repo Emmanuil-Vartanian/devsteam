@@ -1,17 +1,15 @@
-import React, { useContext } from 'react'
-import { useTranslation } from 'react-i18next'
+import React from 'react'
 
-import LanguageStateContext from 'services/context/languageStateContext'
-import Button from 'components/Button'
+import { Container } from './style'
+
+import Header from './components/Header'
 
 const Home: React.FC = () => {
-  const { t } = useTranslation()
-  const { handleChangeStateLanguage } = useContext(LanguageStateContext)
-
   return (
     <div>
-      <Button title="EN" onClick={() => handleChangeStateLanguage('en')} />
-      <Button title="UA" onClick={() => handleChangeStateLanguage('ua')} />
+      <Container>
+        <Header />
+      </Container>
     </div>
   )
 }

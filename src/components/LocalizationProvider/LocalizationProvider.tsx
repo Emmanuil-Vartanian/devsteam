@@ -2,21 +2,21 @@ import React, { useContext, useEffect } from 'react'
 
 import { useTranslation } from 'react-i18next'
 
-import LanguageStateContext from 'services/context/languageStateContext'
+import LanguageStateContext from 'services/context/AppStateContext'
 
 export interface ChildrenProps {
   children: React.ReactElement
 }
 
 const LocalizationProvider: React.FC<ChildrenProps> = ({ children }) => {
-  const { currentLanguage } = useContext(LanguageStateContext)
+  const { state } = useContext(LanguageStateContext)
   const { i18n } = useTranslation()
 
   useEffect(() => {
-    if (currentLanguage) {
-      i18n.changeLanguage(currentLanguage)
+    if (state.language) {
+      i18n.changeLanguage(state.language)
     }
-  }, [currentLanguage])
+  }, [state.language])
 
   return <>{children}</>
 }

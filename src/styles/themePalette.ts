@@ -1,7 +1,7 @@
 import { PaletteOptions } from '@mui/material'
 
 type ThemePalettePocketType = {
-  pocket: Record<string, any>
+  devsteam: Record<string, any>
 }
 
 export type ThemePaletteType = {
@@ -10,7 +10,7 @@ export type ThemePaletteType = {
 
 const themePalette: ThemePaletteType = {
   palette: {
-    pocket: {
+    devsteam: {
       common: {
         black: '#000',
         white: '#fff',
@@ -18,35 +18,28 @@ const themePalette: ThemePaletteType = {
         green: '#27CD27',
         orange: '#FF9800'
       },
-      primary: {
-        '5': '#f3f8fd',
-        '10': '#F5F5FF',
-        '30': '#C6C5F7',
-        '40': '#b7b6f9',
-        '80': '#373665',
-        '90': '#5755f3',
-        '100': '#504EF3'
+      main: {
+        text: '#323232'
       },
-      menu: {
-        '90': '#1E1D51',
-        '100': '#05043E'
+      primary: {
+        '80': '#a0a8e6',
+        '90': '#4151CD',
+        '100': '#001AE1'
+      },
+      additional: {
+        background: '#FDFDFD',
+        cardsBackground: '#05043E'
       },
       grey: {
-        '2': '#FCFCFC',
-        '3': '#F8F8F8',
-        '5': '#F4F4F4',
-        '10': '#E9E9E9',
-        '15': '#E0E0E0',
-        '20': '#69688b',
-        '40': '#afafb0',
-        '50': '#999999',
-        '70': '#6D6D6D',
-        '100': '#212121'
+        '1': '#D9D9D9',
+        '2': '#9CA5B0',
+        '3': '#737373',
+        dark: '#212121',
+        black: '#00031A'
       },
-      colorStatus: palette => ({
-        ACTIVE: palette.pocket.common.green,
-        NOT_ACTIVE: palette.pocket.common.red
-      })
+      other: {
+        stroke: '#D2D7FF'
+      }
     }
   }
 }

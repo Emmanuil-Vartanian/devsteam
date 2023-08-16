@@ -1,12 +1,8 @@
 import React from 'react'
+import { Button as ButtonMui, ButtonProps as ButtonPropsMui } from '@mui/material'
 
-interface ButtonProps {
-  title: string
-  onClick?: () => void
-}
-
-const Button: React.FC<ButtonProps> = ({ title, onClick }) => {
-  return <button onClick={onClick}>{title}</button>
+const Button: React.FC<ButtonPropsMui> = ({ size = 'large', ...rest }) => {
+  return <ButtonMui variant="contained" size={size} {...rest} />
 }
 
 export default Button
