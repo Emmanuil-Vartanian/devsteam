@@ -44,6 +44,7 @@
     "react/display-name": "off",
     "react/jsx-curly-spacing": ["off"],
     "promise/no-promise-in-callback": "off",
+    "@typescript-eslint/no-unused-vars": "off",
     "max-len": [
       "warn",
       {
