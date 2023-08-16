@@ -19,7 +19,7 @@ const NotFound: React.FC = () => {
       <h1>404</h1>
       <h3>{t('notFound.title')}</h3>
       <h5>{t('notFound.description')}</h5>
-      <Button title={t('notFound.back')} onClick={handleGoHome} />
+      <Button onClick={handleGoHome}>{t('notFound.back')}</Button>
     </NotFoundBlock>
   )
 }

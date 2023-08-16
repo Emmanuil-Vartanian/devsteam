@@ -4,17 +4,20 @@ import 'i18n/config'
 
 import Router from 'router'
 import LocalizationProvider from 'components/LocalizationProvider'
-import LanguageStateProvider from 'components/LanguageStateProvider'
+import AppStateProvider from 'components/AppStateProvider'
+import ThemeProvider from 'components/ThemeProvider'
 
 const App: React.FC = () => {
   return (
-    <div>
-      <LanguageStateProvider>
+    <AppStateProvider>
+      <ThemeProvider>
         <LocalizationProvider>
-          <Router />
+          <div className="app">
+            <Router />
+          </div>
         </LocalizationProvider>
-      </LanguageStateProvider>
-    </div>
+      </ThemeProvider>
+    </AppStateProvider>
   )
 }
 
