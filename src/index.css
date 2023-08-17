@@ -13,6 +13,10 @@ a {
   color: inherit;
 }
 
+img {
+  border-radius: 8px;
+}
+
 .app {
   max-width: 1280px;
   width: 100%;

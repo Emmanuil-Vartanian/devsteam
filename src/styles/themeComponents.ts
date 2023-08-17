@@ -11,7 +11,7 @@ const themeComponents = {
   components: {
     MuiButton: {
       styleOverrides: {
-        root: ({ theme: { palette, spacing }, ownerState }) => ({
+        root: ({ theme: { palette }, ownerState }) => ({
           borderRadius: 8,
           boxShadow: 'none',
           padding: '15px 16px',
@@ -51,6 +51,34 @@ const themeComponents = {
             //   }
             // })
           }
+        })
+      }
+    },
+    MuiTabPanel: {
+      styleOverrides: {
+        root: {
+          padding: '32px 24px 0 16px'
+        }
+      }
+    },
+    MuiTabs: {
+      styleOverrides: {
+        root: {
+          minHeight: '34px'
+        },
+        flexContainer: ({ theme: { palette } }) => ({
+          '.MuiButtonBase-root': {
+            padding: '8px',
+            color: palette.devsteam.grey['2'],
+            minHeight: '34px',
+            minWidth: '131px',
+            '&.Mui-selected': {
+              color: palette.devsteam.primary['90']
+            }
+          }
+        }),
+        indicator: ({ theme: { palette } }) => ({
+          backgroundColor: palette.devsteam.primary['90']
         })
       }
     }
