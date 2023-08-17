@@ -27,7 +27,6 @@ export const ListDropdown = styled('div')(
   ({ theme: { palette } }) => `
   margin: 0;
   padding: 0;
-  padding-top: 4px;
   list-style-type: none;
   opacity: 0;
   position: absolute;

@@ -19,5 +19,26 @@ export default {
     title: 'Сторінка в розробці',
     description: 'Будь-ласка спробуйте пізніше',
     back: 'Назад'
+  },
+  main: {
+    title: 'Знайдіть Найкращу Розумну Нерухомість',
+    buy: 'Купити',
+    rent: 'Оренда',
+    search: 'Пошук',
+    city: 'Місто',
+    propertyType: 'Тип власності',
+    priceRange: 'Діапазон Цін',
+    apartments: 'Квартири',
+    cottageTownships: 'Котеджні містечка',
+    houses: 'Будинки',
+    commercialProperty: 'Комерційна нерухомість'
+  },
+  cities: {
+    kyiv: 'Київ',
+    kharkiv: 'Харків'
+  },
+  propertyTypes: {
+    house: 'Будинок',
+    apartment: 'Квартира'
   }
 }

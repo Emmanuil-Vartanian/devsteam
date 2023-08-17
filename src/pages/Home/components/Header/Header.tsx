@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 import {
   ButtonBlock,
@@ -13,18 +14,19 @@ import {
 import logo from 'assets/images/logo.png'
 import DropdownList from 'components/DropdownList'
 import { LANGUAGES } from 'constants/languages'
-import LanguageStateContext from 'services/context/AppStateContext'
+import AppStateContext from 'services/context/AppStateContext'
 import { CURRENCY } from 'constants/currency'
 import Button from 'components/Button'
 import { ROUTES } from 'constants/routes'
 import Link from 'components/Link'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { NAVIGATION } from 'constants/navigation'
+import { getDataOptions } from 'services/formOptions'
 
 const navigation = [
-  { name: 'home', href: ROUTES.HOME_PAGE },
-  { name: 'aboutUs', href: ROUTES.ABOUT_US_PAGE },
-  { name: 'features', href: ROUTES.FEATURES_PAGE },
-  { name: 'contact', href: ROUTES.CONTACT_PAGE }
+  { name: NAVIGATION.HOME, href: ROUTES.HOME_PAGE },
+  { name: NAVIGATION.ABOUT_US, href: ROUTES.ABOUT_US_PAGE },
+  { name: NAVIGATION.FEATURES, href: ROUTES.FEATURES_PAGE },
+  { name: NAVIGATION.CONTACT, href: ROUTES.CONTACT_PAGE }
 ]
 
 const Header: React.FC = () => {
@@ -32,7 +34,7 @@ const Header: React.FC = () => {
   const location = useLocation()
   const navigate = useNavigate()
   const { state, handleChangeStateLanguage, handleChangeStateCurrency } =
-    useContext(LanguageStateContext)
+    useContext(AppStateContext)
 
   const dropdownList = (
     values: Record<string, any>,
@@ -40,6 +42,9 @@ const Header: React.FC = () => {
   ): string[] => {
     return Object.keys(values).filter(value => value !== state[statePropert])
   }
+
+  const languagesOptions = getDataOptions(dropdownList(LANGUAGES, 'language'))
+  const currenciesOptions = getDataOptions(dropdownList(CURRENCY, 'currency'))
 
   const handleChangeLang = value => () => {
     handleChangeStateLanguage(value)
@@ -49,7 +54,7 @@ const Header: React.FC = () => {
     handleChangeStateCurrency(value)
   }
 
-  const handleGoToNotFoundPage = () => {
+  const handleGoToPageUnderConstruction = () => {
     navigate(ROUTES.PAGE_UNDER_CONSTRUCTION)
   }
 
@@ -73,19 +78,19 @@ const Header: React.FC = () => {
           <DropdownList
             currentValue={state.language}
             handleChangeValue={handleChangeLang}
-            dropdownList={dropdownList(LANGUAGES, 'language')}
+            dropdownList={languagesOptions}
           />
           <DropdownList
             currentValue={state.currency}
             handleChangeValue={handleChangeCurrency}
-            dropdownList={dropdownList(CURRENCY, 'currency')}
+            dropdownList={currenciesOptions}
           />
         </DropdownBlock>
         <ButtonBlock>
-          <Button variant={'text'} onClick={handleGoToNotFoundPage}>
+          <Button variant={'text'} onClick={handleGoToPageUnderConstruction}>
             {t('common.logIn')}
           </Button>
-          <Button onClick={handleGoToNotFoundPage}>{t('common.createAccount')}</Button>
+          <Button onClick={handleGoToPageUnderConstruction}>{t('common.createAccount')}</Button>
         </ButtonBlock>
       </NavBlock>
     </HeaderContainer>

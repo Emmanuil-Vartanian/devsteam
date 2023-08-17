@@ -4,10 +4,16 @@ import { DropdownBlock, ListDropdown } from './style'
 
 import ArrowDownSvg from 'assets/svg/ArrowDownSvg'
 
+export interface DropdownListOption {
+  id: number
+  value: string
+  code: string
+}
+
 interface DropdownListProps {
   currentValue: string
   handleChangeValue: (value) => () => void
-  dropdownList: string[]
+  dropdownList: DropdownListOption[]
 }
 
 const DropdownList: React.FC<DropdownListProps> = ({
@@ -20,8 +26,8 @@ const DropdownList: React.FC<DropdownListProps> = ({
       <span>{currentValue.toUpperCase()}</span>
       <ArrowDownSvg />
       <ListDropdown className="listDropdown">
-        {dropdownList.map((value, index) => (
-          <div key={index} onClick={handleChangeValue(value)}>
+        {dropdownList.map(({ id, value, code }) => (
+          <div key={id} onClick={handleChangeValue(code)}>
             {value.toUpperCase()}
           </div>
         ))}
