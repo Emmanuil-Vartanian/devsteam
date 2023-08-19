@@ -5,6 +5,8 @@ import { Container } from './style'
 import Header from './components/Header'
 import Main from './components/Main'
 import FeatureProperties from './components/FeatureProperties'
+import Benefits from './components/Benefits'
+import ContactForm from './components/ContactForm'
 
 const Home: React.FC = () => {
   return (
@@ -14,6 +16,10 @@ const Home: React.FC = () => {
         <Main />
       </Container>
       <FeatureProperties />
+      <Container>
+        <Benefits />
+        <ContactForm />
+      </Container>
     </div>
   )
 }

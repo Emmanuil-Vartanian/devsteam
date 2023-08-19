@@ -1,46 +1,43 @@
-import React from 'react'
-import { CheckboxProps } from '@mui/material/Checkbox'
+import React, { useState } from 'react'
+import FormGroup from '@mui/material/FormGroup'
 import FormControlLabel from '@mui/material/FormControlLabel'
+import Checkbox from '@mui/material/Checkbox'
 
-import { CheckboxFormControlStyled, CheckboxStyled } from './style'
-
-interface InputFieldProps {
+type OptionsType = {
   name: string
-  label?: string
-  onHandleChange?: any
-  disabled?: boolean
+  label: string
+  checked: boolean
 }
 
-type Props = InputFieldProps & CheckboxProps
+interface CheckboxFieldProps {
+  options: OptionsType[]
+  onChange: (data) => void
+}
 
-const CheckboxField: React.FC<Props> = props => {
-  const { name, label, onHandleChange, disabled } = props
+const CheckboxField: React.FC<CheckboxFieldProps> = props => {
+  const { options, onChange } = props
 
-  const handleChange = onChange => event => {
-    onChange(event)
+  const handleChange = event => {
+    const checked = event.target.checked
+    const name = event.target.name
 
-    if (typeof onHandleChange === 'function') {
-      onHandleChange(event)
+    if (typeof onChange === 'function') {
+      onChange({ name, checked })
     }
   }
 
   return (
-    <div>
-      <CheckboxFormControlStyled>
-        <FormControlLabel
-          control={
-            <CheckboxStyled
-            // checked={props.input.checked}
-            // onChange={handleChange(props.input.onChange)}
-            // name={props.input.name}
-            // color={'primary'}
-            // disabled={disabled}
-            />
-          }
-          label={label}
-        />
-      </CheckboxFormControlStyled>
-    </div>
+    <FormGroup {...props}>
+      {options.map(({ name, label, checked }, index) => {
+        return (
+          <FormControlLabel
+            key={index}
+            control={<Checkbox name={name} checked={checked} onChange={handleChange} />}
+            label={label}
+          />
+        )
+      })}
+    </FormGroup>
   )
 }
 

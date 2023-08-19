@@ -86,6 +86,29 @@ const themeComponents = {
           backgroundColor: palette.devsteam.primary['90']
         })
       }
+    },
+    MuiCheckbox: {
+      styleOverrides: {
+        root: {
+          color: '#D2D7FF',
+          '&.Mui-checked': {
+            color: '#4151CD'
+          }
+        }
+      }
+    },
+    MuiFormControlLabel: {
+      styleOverrides: {
+        root: {
+          '>.MuiTypography-root': {
+            color: '#212121',
+            fontFamily: 'Manrope',
+            fontSize: '16px',
+            fontWeight: 600,
+            lineHeight: '140%'
+          }
+        }
+      }
     }
   }
 }

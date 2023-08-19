@@ -143,7 +143,7 @@ export const OwnerContacts = styled('div')(
     :first-of-type {
       color: #00a11a;
     }
-    :nth-child(2n) {
+    :nth-0f-type(2n) {
       color: #1084ef;
     }
   }

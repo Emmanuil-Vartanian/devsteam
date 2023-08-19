@@ -21,7 +21,7 @@ export const CarouselBlock = styled('div')`
   padding: 35px 0;
 `
 
-export const CardBlock = styled(Link)`
+export const CardBlock = styled('div')`
   width: 378px;
   height: 610px;
   flex-shrink: 0;
@@ -29,7 +29,7 @@ export const CardBlock = styled(Link)`
   border-radius: 8px;
   background: #fdfdfd;
   box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.05);
-  list-style-type: none;
+  cursor: pointer;
 `
 
 export const CardBtns = styled('div')`

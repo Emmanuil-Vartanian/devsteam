@@ -17,9 +17,9 @@ export const featurePropertiesData = [
       name: 'Anna',
       surname: 'Bush',
       avatar: avatar,
-      whatsApp: '',
-      telegram: '',
-      phone: ''
+      whatsApp: '#',
+      telegram: '#',
+      phone: '#'
     }
   },
   {
@@ -35,9 +35,9 @@ export const featurePropertiesData = [
       name: 'Anna',
       surname: 'Bush',
       avatar: avatar,
-      whatsApp: '',
-      telegram: '',
-      phone: ''
+      whatsApp: '#',
+      telegram: '#',
+      phone: '#'
     }
   },
   {
@@ -53,9 +53,9 @@ export const featurePropertiesData = [
       name: 'Anna',
       surname: 'Bush',
       avatar: avatar,
-      whatsApp: '',
-      telegram: '',
-      phone: ''
+      whatsApp: '#',
+      telegram: '#',
+      phone: '#'
     }
   },
   {
@@ -71,9 +71,9 @@ export const featurePropertiesData = [
       name: 'Anna',
       surname: 'Bush',
       avatar: avatar,
-      whatsApp: '',
-      telegram: '',
-      phone: ''
+      whatsApp: '#',
+      telegram: '#',
+      phone: '#'
     }
   },
   {
@@ -89,9 +89,9 @@ export const featurePropertiesData = [
       name: 'Anna',
       surname: 'Bush',
       avatar: avatar,
-      whatsApp: '',
-      telegram: '',
-      phone: ''
+      whatsApp: '#',
+      telegram: '#',
+      phone: '#'
     }
   },
   {
@@ -107,9 +107,9 @@ export const featurePropertiesData = [
       name: 'Anna',
       surname: 'Bush',
       avatar: avatar,
-      whatsApp: '',
-      telegram: '',
-      phone: ''
+      whatsApp: '#',
+      telegram: '#',
+      phone: '#'
     }
   },
   {
@@ -125,9 +125,9 @@ export const featurePropertiesData = [
       name: 'Anna',
       surname: 'Bush',
       avatar: avatar,
-      whatsApp: '',
-      telegram: '',
-      phone: ''
+      whatsApp: '#',
+      telegram: '#',
+      phone: '#'
     }
   },
   {
@@ -143,9 +143,9 @@ export const featurePropertiesData = [
       name: 'Anna',
       surname: 'Bush',
       avatar: avatar,
-      whatsApp: '',
-      telegram: '',
-      phone: ''
+      whatsApp: '#',
+      telegram: '#',
+      phone: '#'
     }
   },
   {
@@ -161,9 +161,9 @@ export const featurePropertiesData = [
       name: 'Anna',
       surname: 'Bush',
       avatar: avatar,
-      whatsApp: '',
-      telegram: '',
-      phone: ''
+      whatsApp: '#',
+      telegram: '#',
+      phone: '#'
     }
   },
   {
@@ -179,9 +179,9 @@ export const featurePropertiesData = [
       name: 'Anna',
       surname: 'Bush',
       avatar: avatar,
-      whatsApp: '',
-      telegram: '',
-      phone: ''
+      whatsApp: '#',
+      telegram: '#',
+      phone: '#'
     }
   }
 ]

@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { ErrorMessage, InputStyled, InputFieldBlock, FieldLabel } from './style'
+import { TextareaStyled, TextareaFieldBlock } from './style'
+import { ErrorMessage, FieldLabel } from '../InputField/style'
 
-interface InputFieldProps {
+interface TextareaFieldProps {
   name: string
   value: string
   onChange: (e) => void
   label?: string
-  type?: 'text' | 'number' | 'email'
   placeholder?: string
   startAdornment?: React.ReactNode
   endAdornment?: React.ReactNode
@@ -17,20 +17,8 @@ interface InputFieldProps {
   maxWidth?: number
 }
 
-const InputField: React.FC<InputFieldProps> = props => {
-  const {
-    value,
-    name,
-    placeholder,
-    onChange,
-    type,
-    label,
-    startAdornment,
-    endAdornment,
-    required,
-    errorMessage,
-    maxWidth
-  } = props
+const TextareaField: React.FC<TextareaFieldProps> = props => {
+  const { value, name, placeholder, onChange, label, required, errorMessage, maxWidth } = props
   const { t } = useTranslation()
   const [focus, setFocus] = useState(false)
   const [mouseEnter, setMouseEnter] = useState(false)
@@ -54,25 +42,22 @@ const InputField: React.FC<InputFieldProps> = props => {
   return (
     <div>
       <FieldLabel>{label}</FieldLabel>
-      <InputFieldBlock focus={focus} mouseEnter={mouseEnter} maxWidth={maxWidth}>
-        {startAdornment}
-        <InputStyled
+      <TextareaFieldBlock focus={focus} mouseEnter={mouseEnter} maxWidth={maxWidth}>
+        <TextareaStyled
           name={name}
           value={value}
           onChange={onChange}
           placeholder={placeholder}
-          type={type}
           required={required}
           onFocus={handleChangeFocus}
           onBlur={handleChangeFocus}
           onMouseEnter={handleChangeMouseEnter}
           onMouseLeave={handleChangeMouseEnter}
         />
-        {endAdornment}
-      </InputFieldBlock>
+      </TextareaFieldBlock>
       {errorMessage ? <ErrorMessage>{t(errorMessage)}</ErrorMessage> : null}
     </div>
   )
 }
 
-export default InputField
+export default TextareaField
