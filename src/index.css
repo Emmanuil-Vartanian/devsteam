@@ -17,6 +17,16 @@ img {
   border-radius: 8px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .app {
   max-width: 1280px;
   width: 100%;

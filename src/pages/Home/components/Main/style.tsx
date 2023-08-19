@@ -122,4 +122,7 @@ export const DataBlock = styled('div')`
     transform: scale(1.05);
     z-index: 2;
   }
+  > img {
+    width: 100%;
+  }
 `
