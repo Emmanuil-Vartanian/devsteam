@@ -13,7 +13,7 @@ const theme = createTheme({
       fontSize: '56px',
       lineHeight: '110%',
       letterSpacing: '0.56px',
-      color: palette.devsteam.main.text
+      color: palette.devsteam.grey.black
     },
     h2: {
       fontFamily: '"Manrope", sans-serif',
@@ -21,7 +21,7 @@ const theme = createTheme({
       fontSize: '48px',
       lineHeight: '110%',
       letterSpacing: '0px',
-      color: palette.devsteam.main.text
+      color: palette.devsteam.grey.black
     },
     h3: {
       fontFamily: '"Manrope", sans-serif',
@@ -29,7 +29,7 @@ const theme = createTheme({
       fontSize: '30px',
       lineHeight: '120%',
       letterSpacing: '0px',
-      color: palette.devsteam.main.text
+      color: palette.devsteam.grey.black
     },
     h4: {
       fontFamily: '"Manrope", sans-serif',
@@ -37,7 +37,7 @@ const theme = createTheme({
       fontSize: '22px',
       lineHeight: '140%',
       letterSpacing: '0px',
-      color: palette.devsteam.main.text
+      color: palette.devsteam.grey.black
     },
     button: {
       fontFamily: '"Manrope", sans-serif',

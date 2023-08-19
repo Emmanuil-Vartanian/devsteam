@@ -71,5 +71,8 @@ export const DropdownBlock = styled('div')(
 export const ButtonBlock = styled('div')`
   > button:first-of-type {
     margin-right: 16px;
+    max-width: 78px;
+    padding: 15px 16px;
+    border-bottom: none;
   }
 `
