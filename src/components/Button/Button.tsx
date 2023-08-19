@@ -1,8 +1,18 @@
 import React from 'react'
-import { Button as ButtonMui, ButtonProps as ButtonPropsMui } from '@mui/material'
+import { ButtonProps as ButtonPropsMui } from '@mui/material'
 
-const Button: React.FC<ButtonPropsMui> = ({ size = 'large', ...rest }) => {
-  return <ButtonMui variant="contained" size={size} {...rest} />
+import { ButtonStyled } from './style'
+
+interface ButtonProps {
+  justifyContent?: 'start' | 'end' | 'center'
+}
+
+const Button: React.FC<ButtonPropsMui & ButtonProps> = ({
+  justifyContent = 'center',
+  size = 'large',
+  ...rest
+}) => {
+  return <ButtonStyled variant="contained" size={size} justifyContent={justifyContent} {...rest} />
 }
 
 export default Button

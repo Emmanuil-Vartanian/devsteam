@@ -34,7 +34,12 @@ const themeComponents = {
           //   }
           // }),
           ...ownerStateStyle(ownerState, 'text', 'primary', {
-            color: palette.devsteam.primary['90']
+            color: palette.devsteam.primary['90'],
+            padding: '8px 0',
+            maxWidth: '178px',
+            width: '100%',
+            borderBottom: '1px solid #4151cd',
+            borderRadius: 0
           }),
           '&.Mui-disabled': {
             cursor: 'not-allowed',

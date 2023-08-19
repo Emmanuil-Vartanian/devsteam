@@ -4,6 +4,7 @@ import { Container } from './style'
 
 import Header from './components/Header'
 import Main from './components/Main'
+import FeatureProperties from './components/FeatureProperties'
 
 const Home: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const Home: React.FC = () => {
         <Header />
         <Main />
       </Container>
+      <FeatureProperties />
     </div>
   )
 }
