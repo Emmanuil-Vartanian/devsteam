@@ -1,8 +1,17 @@
 import { styled } from '@mui/system'
+import { ProvideExperienceContainer } from '../ProvideExperience/style'
 
 type ExperienceStepType = {
   stepNumber: number
 }
+
+export const ProcessExperienceContainer = styled(ProvideExperienceContainer)`
+  @media (max-width: 915px) {
+    > img {
+      display: none;
+    }
+  }
+`
 
 export const ProcessExperienceBloc = styled('div')`
   margin-right: 20px;
@@ -45,6 +54,12 @@ export const ExperienceStepInfoBlock = styled('div')`
   > div {
     margin-top: 5px;
     margin-bottom: 66px;
+    @media (max-width: 450px) {
+      margin-bottom: 35px;
+      :nth-of-type(2n) {
+        margin-bottom: 51px;
+      }
+    }
   }
 `
 

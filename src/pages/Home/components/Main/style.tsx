@@ -11,6 +11,17 @@ export const MainInfoBlock = styled('div')`
   text-align: end;
 `
 
+export const MainImageBlock = styled('div')`
+  overflow: hidden;
+  border-radius: 8px;
+  > img {
+    width: 100%;
+    @media (max-width: 650px) {
+      width: 600px;
+    }
+  }
+`
+
 export const MainTitle = styled(
   'div',
   styledCustomProps
@@ -41,6 +52,24 @@ export const MainTitle = styled(
     height: 316px;
     width: ${languageCode === LANGUAGES.en ? '371px' : '435px'};
     border-radius: 0px 8px 8px 0px;
+    @media (max-width: 900px) {
+      width: ${languageCode === LANGUAGES.en ? '300px' : '346px'};
+      height: 266px;
+    }
+    @media (max-width: 650px) {
+      max-width: ${languageCode === LANGUAGES.en ? '253px' : '310px'};
+      height: 170px;
+    }
+  }
+  @media (max-width: 900px) {
+    font-size: 40px;
+    max-width: ${languageCode === LANGUAGES.en ? '380px' : '470px'};
+    height: 266px;
+  }
+  @media (max-width: 650px) {
+    font-size: 35px;
+    max-width: ${languageCode === LANGUAGES.en ? '330px' : '390px'};
+    height: 170px;
   }
 `
 )
@@ -56,6 +85,11 @@ export const FilterBlock = styled('div')(
   max-width: 968px;
   width: 100%;
   text-align: start;
+  @media (max-width: 1100px) {
+    position: relative;
+    bottom: 0;
+    margin-top: 30px;
+  }
 `
 )
 
@@ -63,6 +97,8 @@ export const TabPanelBlock = styled('div')`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
 `
 
 export const FilterDropdownBlock = styled('div')(
@@ -91,6 +127,10 @@ export const HouseData = styled('div')`
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-top: 153px;
+  @media (max-width: 900px) {
+    display: block;
+    margin-top: 80px;
+  }
 `
 
 export const DataBlock = styled('div')`
@@ -124,5 +164,18 @@ export const DataBlock = styled('div')`
   }
   > img {
     width: 100%;
+    object-fit: cover;
+    @media (max-width: 900px) {
+      height: 272px;
+    }
+    @media (max-width: 600px) {
+      max-height: 190px;
+    }
+  }
+  @media (max-width: 900px) {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 600px) {
+    max-height: 190px;
   }
 `

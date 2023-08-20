@@ -4,16 +4,17 @@ import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 
 import { CategoryDescription } from '../Categories/style'
-
-import provideExperience from 'assets/images/provideExperience.png'
-import Button from 'components/Button'
-import { ROUTES } from 'constants/routes'
 import {
+  BenefitsImageBlock,
   ExperienceNumber,
   ExperienceNumberBlock,
   ProvideExperienceContainer,
   ProvideExperienceInfo
 } from './style'
+
+import provideExperience from 'assets/images/provideExperience.png'
+import Button from 'components/Button'
+import { ROUTES } from 'constants/routes'
 
 const ProvideExperience: React.FC = () => {
   const { t } = useTranslation()
@@ -25,7 +26,9 @@ const ProvideExperience: React.FC = () => {
 
   return (
     <ProvideExperienceContainer>
-      <img src={provideExperience} alt="provideExperience" />
+      <BenefitsImageBlock>
+        <img src={provideExperience} alt="provideExperience" />
+      </BenefitsImageBlock>
       <ProvideExperienceInfo>
         <div>
           <Typography variant="h3">{t('benefits.provideExperience.title')}</Typography>

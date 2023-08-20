@@ -2,14 +2,14 @@ import React from 'react'
 import Typography from '@mui/material/Typography'
 import { useTranslation } from 'react-i18next'
 
-import { ProvideExperienceContainer } from '../ProvideExperience/style'
 import { CategoryDescription } from '../Categories/style'
 import {
   ExperienceStep,
   ExperienceStepContainer,
   ExperienceStepInfoBlock,
   ExperienceStepTitle,
-  ProcessExperienceBloc
+  ProcessExperienceBloc,
+  ProcessExperienceContainer
 } from './style'
 
 import processExperience from 'assets/images/processExperience.png'
@@ -18,7 +18,7 @@ const ProcessExperience: React.FC = () => {
   const { t } = useTranslation()
 
   return (
-    <ProvideExperienceContainer>
+    <ProcessExperienceContainer>
       <ProcessExperienceBloc>
         <Typography variant="h3">{t('benefits.processExperience.title')}</Typography>
         <ExperienceStepContainer>
@@ -56,7 +56,7 @@ const ProcessExperience: React.FC = () => {
         </ExperienceStepContainer>
       </ProcessExperienceBloc>
       <img src={processExperience} alt="processExperience" />
-    </ProvideExperienceContainer>
+    </ProcessExperienceContainer>
   )
 }
 

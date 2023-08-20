@@ -5,10 +5,18 @@ export const CategoriesContainer = styled('div')`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  @media (max-width: 900px) {
+    display: block;
+    margin: 100px 0 124px;
+  }
 `
 
 export const CategoryBlock = styled('div')`
   text-align: center;
+  @media (max-width: 900px) {
+    max-width: 400px;
+    margin: 60px auto 0;
+  }
 `
 
 export const CategoryIcon = styled('div')`
@@ -33,4 +41,7 @@ export const CategoryDescription = styled('div')`
   line-height: 140%;
   opacity: 0.7;
   margin-top: 12px;
+  @media (max-width: 450px) {
+    font-size: 14px;
+  }
 `

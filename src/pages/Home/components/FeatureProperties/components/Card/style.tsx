@@ -20,6 +20,10 @@ export const CardImageBlock = styled('div')(
     max-width: 346px;
     max-height: 250px;
     border-radius: 8px;
+    @media (max-width: 900px) {
+      max-width: 250px;
+      max-height: 250px;
+    }
   }
   > div {
     position: absolute;
@@ -137,6 +141,10 @@ export const OwnerContacts = styled('div')(
       border-right: 1px solid ${palette.devsteam.grey['2']};
       padding-right: 16px;
       margin-right: 15px;
+      @media (max-width: 900px) {
+        padding-right: 40px;
+        margin-right: 40px;
+      }
     }
     > svg {
       margin-right: 4px;
@@ -146,6 +154,11 @@ export const OwnerContacts = styled('div')(
     }
     :nth-of-type(2n) {
       color: #1084ef;
+    }
+    @media (max-width: 900px) {
+      > span {
+        display: none;
+      }
     }
   }
 `

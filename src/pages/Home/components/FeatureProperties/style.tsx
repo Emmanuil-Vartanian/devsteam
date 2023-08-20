@@ -13,6 +13,16 @@ export const TitleBlock = styled('div')`
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+  @media (max-width: 800px) {
+    padding: 0 24px;
+  }
+  @media (max-width: 500px) {
+    display: block;
+    > button {
+      justify-content: start;
+      margin-top: 20px;
+    }
+  }
 `
 
 export const CarouselBlock = styled('div')`
@@ -31,6 +41,10 @@ export const CardBlock = styled('div')`
   border-radius: 8px;
   background: #fdfdfd;
   box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.05);
+  @media (max-width: 900px) {
+    width: 283px;
+    height: 550px;
+  }
 `
 
 export const CardBtns = styled('div')`
@@ -45,5 +59,11 @@ export const CardBtns = styled('div')`
     :last-child {
       justify-content: end;
     }
+    @media (max-width: 450px) {
+      max-width: 115px;
+    }
+  }
+  @media (max-width: 800px) {
+    padding: 0 24px 24px;
   }
 `
