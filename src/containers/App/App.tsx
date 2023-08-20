@@ -6,15 +6,16 @@ import Router from 'router'
 import LocalizationProvider from 'components/LocalizationProvider'
 import AppStateProvider from 'components/AppStateProvider'
 import ThemeProvider from 'components/ThemeProvider'
+import ScrollUpButton from 'components/ScrollUpButton'
 
 const App: React.FC = () => {
   return (
     <AppStateProvider>
       <ThemeProvider>
         <LocalizationProvider>
-          <div className="app">
+          <ScrollUpButton>
             <Router />
-          </div>
+          </ScrollUpButton>
         </LocalizationProvider>
       </ThemeProvider>
     </AppStateProvider>

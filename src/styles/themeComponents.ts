@@ -24,15 +24,6 @@ const themeComponents = {
               boxShadow: 'none'
             }
           }),
-          // ...ownerStateStyle(ownerState, 'outlined', 'primary', {
-          //   // backgroundColor: palette.devsteam.common.white,
-          //   color: palette.devsteam.primary['100'],
-          //   border: `1px solid ${palette.devsteam.primary['100']}`,
-          //   ':hover': {
-          //     // color: palette.devsteam.common.white,
-          //     border: `1px solid ${palette.devsteam.primary['100']}`
-          //   }
-          // }),
           ...ownerStateStyle(ownerState, 'text', 'primary', {
             color: palette.devsteam.primary['90'],
             padding: '8px 0',
@@ -48,13 +39,6 @@ const themeComponents = {
               color: palette.devsteam.common.white,
               backgroundColor: palette.devsteam.primary['80']
             })
-            // ...ownerStateStyle(ownerState, 'outlined', 'primary', {
-            //   color: palette.devsteam.primary['40'],
-            //   borderColor: palette.devsteam.primary['40'],
-            //   '&:hover': {
-            //     // backgroundColor: `${palette.devsteam.common.white} !important`
-            //   }
-            // })
           }
         })
       }

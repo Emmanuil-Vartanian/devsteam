@@ -26,9 +26,3 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield;
 }
-
-.app {
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-}

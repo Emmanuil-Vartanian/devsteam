@@ -107,6 +107,21 @@ export default {
       other: 'Other'
     }
   },
+  footer: {
+    description:
+      'Choose our real estate agency for your property needs, and let us help you turn your real estate aspirations into reality.',
+    explore: 'Explore',
+    ourProperties: 'Our properties',
+    sellYourHome: 'Sell your home',
+    agents: 'Agents',
+    services: 'Services',
+    logIn: 'Log in',
+    signUp: 'Sign up',
+    myAccount: 'My Account',
+    termsCondition: 'Terms & Condition',
+    contactUs: 'Contact us',
+    rightsReserved: '@2023 EHome estate. All rights reserved.'
+  },
   cities: {
     kyiv: 'Kyiv',
     kharkiv: 'Kharkiv'
