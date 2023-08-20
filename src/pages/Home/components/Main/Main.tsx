@@ -5,7 +5,14 @@ import TabList from '@mui/lab/TabList'
 import TabPanel from '@mui/lab/TabPanel'
 import TabContext from '@mui/lab/TabContext'
 
-import { DataBlock, FilterBlock, HouseData, MainInfoBlock, MainTitle } from './style'
+import {
+  DataBlock,
+  FilterBlock,
+  HouseData,
+  MainImageBlock,
+  MainInfoBlock,
+  MainTitle
+} from './style'
 
 import rectangle from 'assets/images/rectangle.png'
 import TabPanelBuy from './components/TabPanelBuy'
@@ -31,7 +38,9 @@ const Main: React.FC = () => {
   return (
     <div>
       <MainInfoBlock>
-        <img src={rectangle} alt="rectangle" />
+        <MainImageBlock>
+          <img src={rectangle} alt="rectangle" />
+        </MainImageBlock>
         <MainTitle languageCode={state.language}>
           <span>{t('main.title')}</span>
         </MainTitle>

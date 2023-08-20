@@ -6,4 +6,7 @@ export const NotFoundBlock = styled('div')`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (max-width: 550px) {
+    text-align: center;
+  }
 `

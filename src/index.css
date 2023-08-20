@@ -26,3 +26,9 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield;
 }
+
+@media (max-width: 915px) {
+  h1 {
+    font-size: 39px !important;
+  }
+}

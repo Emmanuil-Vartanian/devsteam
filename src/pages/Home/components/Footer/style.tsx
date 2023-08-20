@@ -11,12 +11,38 @@ export const FooterContainer = styled(Container)`
   padding: 32px 57px;
   height: 312px;
   display: flex;
-  justify-content: space-between;
-  gap: 96px;
+  gap: 75px;
+  @media (max-width: 1100px) {
+    display: block;
+    height: auto;
+  }
+  @media (max-width: 800px) {
+    padding: 32px 24px;
+  }
+  @media (max-width: 450px) {
+    padding: 32px 24px 0;
+    margin-top: 45px;
+  }
 `
 
 export const FooterFirstBlock = styled('div')`
   max-width: 310px;
+  @media (max-width: 1100px) {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    > div:first-of-type {
+      max-width: 310px;
+    }
+  }
+  @media (max-width: 800px) {
+    display: block;
+    max-width: fit-content;
+    margin: 0 auto 30px;
+    > a {
+      justify-content: center;
+    }
+  }
 `
 
 export const FooterDescription = styled('div')`
@@ -30,6 +56,7 @@ export const FooterDescription = styled('div')`
 export const SocialNetwork = styled('div')`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   > a {
     border-radius: 50%;
     background: #fdfdfd;
@@ -44,9 +71,24 @@ export const SocialNetwork = styled('div')`
   }
 `
 
+export const FooterLinkInfoBlock = styled('div')`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  @media (max-width: 450px) {
+    justify-content: center;
+    text-align: center;
+  }
+`
+
 export const FooterLinkInfo = styled('div')`
   display: flex;
   flex-direction: column;
+  width: 195px;
+  @media (max-width: 450px) {
+    margin-top: 30px;
+  }
 `
 
 export const FooterTitle = styled('div')`
@@ -68,6 +110,9 @@ export const LinkStyled = styled(Link)`
   > svg {
     margin-right: 8px;
   }
+  @media (max-width: 450px) {
+    justify-content: center;
+  }
 `
 
 export const FooterRightsReservedContainer = styled(Container)`
@@ -76,10 +121,13 @@ export const FooterRightsReservedContainer = styled(Container)`
 
 export const RightsReservedBlock = styled('div')`
   padding: 32px 0px;
-  border-top: 1px solid var(--light-grey-prototypes, #d9d9d9);
+  border-top: 1px solid #d9d9d9;
   color: #939393;
   font-size: 14px;
   font-weight: 500;
   line-height: 140%;
   text-align: center;
+  @media (max-width: 450px) {
+    padding: 22px 0 0;
+  }
 `

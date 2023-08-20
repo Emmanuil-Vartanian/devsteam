@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import Typography from '@mui/material/Typography'
 import { useTranslation } from 'react-i18next'
 
-import { ProvideExperienceContainer } from '../Benefits/components/ProvideExperience/style'
 import {
   ButtonStyled,
   CheckboxFieldStyled,
   ContactFormBlock,
+  ContactFormContainer,
   ContactFormImagesBlock,
+  ContactFormImagesContainer,
   FormCheckboxBlock,
   FormCheckboxTitle,
   FormFieldBlock
@@ -66,7 +67,7 @@ const ContactForm: React.FC<RefProps> = ({ refBlock }) => {
   }
 
   return (
-    <ProvideExperienceContainer ref={refBlock}>
+    <ContactFormContainer ref={refBlock}>
       <ContactFormBlock>
         <Typography variant="h3">{t('contactForm.title')}</Typography>
         <FormFieldBlock>
@@ -109,7 +110,7 @@ const ContactForm: React.FC<RefProps> = ({ refBlock }) => {
           {t('contactForm.submit')}
         </ButtonStyled>
       </ContactFormBlock>
-      <div>
+      <ContactFormImagesContainer>
         <img src={contactForm1} alt="contactForm1" />
         <ContactFormImagesBlock>
           <div>
@@ -121,8 +122,8 @@ const ContactForm: React.FC<RefProps> = ({ refBlock }) => {
             <img src={contactForm5} alt="contactForm5" />
           </div>
         </ContactFormImagesBlock>
-      </div>
-    </ProvideExperienceContainer>
+      </ContactFormImagesContainer>
+    </ContactFormContainer>
   )
 }
 

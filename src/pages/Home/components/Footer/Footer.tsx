@@ -11,6 +11,7 @@ import {
   FooterDescription,
   FooterFirstBlock,
   FooterLinkInfo,
+  FooterLinkInfoBlock,
   FooterRightsReservedContainer,
   FooterTitle,
   LinkStyled,
@@ -45,49 +46,51 @@ const Footer: React.FC = () => {
             <Link href={'#'} title={<WhatsAppSvg color="#4151CD" />} />
           </SocialNetwork>
         </FooterFirstBlock>
-        <FooterLinkInfo>
-          <FooterTitle>{t('footer.explore')}</FooterTitle>
-          <LinkStyled href={ROUTES.PAGE_UNDER_CONSTRUCTION} title={t('footer.ourProperties')} />
-          <LinkStyled href={ROUTES.PAGE_UNDER_CONSTRUCTION} title={t('footer.sellYourHome')} />
-          <LinkStyled href={ROUTES.PAGE_UNDER_CONSTRUCTION} title={t('footer.agents')} />
-        </FooterLinkInfo>
-        <FooterLinkInfo>
-          <FooterTitle>{t('footer.services')}</FooterTitle>
-          <LinkStyled href={ROUTES.PAGE_UNDER_CONSTRUCTION} title={t('footer.logIn')} />
-          <LinkStyled href={ROUTES.PAGE_UNDER_CONSTRUCTION} title={t('footer.signUp')} />
-          <LinkStyled href={ROUTES.PAGE_UNDER_CONSTRUCTION} title={t('footer.myAccount')} />
-          <LinkStyled href={ROUTES.PAGE_UNDER_CONSTRUCTION} title={t('footer.termsCondition')} />
-        </FooterLinkInfo>
-        <FooterLinkInfo>
-          <FooterTitle>{t('footer.contactUs')}</FooterTitle>
-          <LinkStyled
-            href={'#'}
-            title={
-              <>
-                <LocationOnOutlinedIcon />
-                <span>Lesi Ukrainky Blvd, 13</span>
-              </>
-            }
-          />
-          <LinkStyled
-            href={'tel:+38 098 809 5467'}
-            title={
-              <>
-                <LocalPhoneOutlinedIcon />
-                <span>+38 098 809 5467</span>
-              </>
-            }
-          />
-          <LinkStyled
-            href={'mailto:ehome@gmail.com'}
-            title={
-              <>
-                <EmailOutlinedIcon />
-                <span>ehome@gmail.com</span>
-              </>
-            }
-          />
-        </FooterLinkInfo>
+        <FooterLinkInfoBlock>
+          <FooterLinkInfo>
+            <FooterTitle>{t('footer.explore')}</FooterTitle>
+            <LinkStyled href={ROUTES.PAGE_UNDER_CONSTRUCTION} title={t('footer.ourProperties')} />
+            <LinkStyled href={ROUTES.PAGE_UNDER_CONSTRUCTION} title={t('footer.sellYourHome')} />
+            <LinkStyled href={ROUTES.PAGE_UNDER_CONSTRUCTION} title={t('footer.agents')} />
+          </FooterLinkInfo>
+          <FooterLinkInfo>
+            <FooterTitle>{t('footer.services')}</FooterTitle>
+            <LinkStyled href={ROUTES.PAGE_UNDER_CONSTRUCTION} title={t('footer.logIn')} />
+            <LinkStyled href={ROUTES.PAGE_UNDER_CONSTRUCTION} title={t('footer.signUp')} />
+            <LinkStyled href={ROUTES.PAGE_UNDER_CONSTRUCTION} title={t('footer.myAccount')} />
+            <LinkStyled href={ROUTES.PAGE_UNDER_CONSTRUCTION} title={t('footer.termsCondition')} />
+          </FooterLinkInfo>
+          <FooterLinkInfo>
+            <FooterTitle>{t('footer.contactUs')}</FooterTitle>
+            <LinkStyled
+              href={'#'}
+              title={
+                <>
+                  <LocationOnOutlinedIcon />
+                  <span>Lesi Ukrainky Blvd, 13</span>
+                </>
+              }
+            />
+            <LinkStyled
+              href={'tel:+38 098 809 5467'}
+              title={
+                <>
+                  <LocalPhoneOutlinedIcon />
+                  <span>+38 098 809 5467</span>
+                </>
+              }
+            />
+            <LinkStyled
+              href={'mailto:ehome@gmail.com'}
+              title={
+                <>
+                  <EmailOutlinedIcon />
+                  <span>ehome@gmail.com</span>
+                </>
+              }
+            />
+          </FooterLinkInfo>
+        </FooterLinkInfoBlock>
       </FooterContainer>
       <FooterRightsReservedContainer>
         <RightsReservedBlock>{t('footer.rightsReserved')}</RightsReservedBlock>
