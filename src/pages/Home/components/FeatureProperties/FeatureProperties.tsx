@@ -11,7 +11,11 @@ import Card from './components/Card'
 import Button from 'components/Button'
 import { ROUTES } from 'constants/routes'
 
-const FeatureProperties: React.FC = () => {
+export interface RefProps {
+  refBlock: any
+}
+
+const FeatureProperties: React.FC<RefProps> = ({ refBlock }) => {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const { scrollRef, next, prev } = useSnapCarousel()
@@ -21,7 +25,7 @@ const FeatureProperties: React.FC = () => {
   }
 
   return (
-    <FeaturePropertiesContainer>
+    <FeaturePropertiesContainer ref={refBlock}>
       <TitleBlock>
         <Typography variant="h1">{t('featureProperties.title')}</Typography>
         <Button variant={'text'} onClick={handleGoToPageUnderConstruction} justifyContent="end">
@@ -30,7 +34,7 @@ const FeatureProperties: React.FC = () => {
       </TitleBlock>
       <CarouselBlock ref={scrollRef}>
         {featurePropertiesData.map(data => (
-          <CardBlock key={data.id} onClick={handleGoToPageUnderConstruction}>
+          <CardBlock key={data.id}>
             <Card data={data} />
           </CardBlock>
         ))}

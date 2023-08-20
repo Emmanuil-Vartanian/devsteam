@@ -1,5 +1,4 @@
 import { styled } from '@mui/system'
-import Link from 'components/Link'
 
 export const FeaturePropertiesContainer = styled('div')`
   margin: 100px 0;
@@ -11,6 +10,9 @@ export const TitleBlock = styled('div')`
   justify-content: space-between;
   margin-bottom: 24px;
   padding: 0 57px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
 `
 
 export const CarouselBlock = styled('div')`
@@ -29,7 +31,6 @@ export const CardBlock = styled('div')`
   border-radius: 8px;
   background: #fdfdfd;
   box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.05);
-  cursor: pointer;
 `
 
 export const CardBtns = styled('div')`
@@ -37,6 +38,9 @@ export const CardBtns = styled('div')`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
   > button {
     :last-child {
       justify-content: end;

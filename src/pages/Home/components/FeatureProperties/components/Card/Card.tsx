@@ -5,6 +5,7 @@ import ShowerOutlinedIcon from '@mui/icons-material/ShowerOutlined'
 import FullscreenExitIcon from '@mui/icons-material/FullscreenExit'
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined'
 import PhoneInTalkOutlinedIcon from '@mui/icons-material/PhoneInTalkOutlined'
+import { useNavigate } from 'react-router-dom'
 
 import {
   CardImageBlock,
@@ -22,16 +23,24 @@ import WhatsAppSvg from 'assets/svg/WhatsAppSvg'
 import TelegramSvg from 'assets/svg/TelegramSvg'
 import Link from 'components/Link'
 
+import { ROUTES } from 'constants/routes'
+
 interface CardProps {
   data: Record<string, any>
 }
 
 const Card: React.FC<CardProps> = ({ data }) => {
+  const navigate = useNavigate()
+
   const { image, price, address, tags, bed, bath, apartmentArea, ownerInfo } = data
+
+  const handleGoToPageUnderConstruction = () => {
+    navigate(ROUTES.PAGE_UNDER_CONSTRUCTION)
+  }
 
   return (
     <div>
-      <TopCardInfo>
+      <TopCardInfo onClick={handleGoToPageUnderConstruction}>
         <CardImageBlock>
           <img src={image} alt="card" />
           <div>
@@ -77,7 +86,7 @@ const Card: React.FC<CardProps> = ({ data }) => {
             href={ownerInfo.whatsApp}
             title={
               <>
-                <WhatsAppSvg />
+                <WhatsAppSvg color="#00A11A" />
                 <span>WhatsApp</span>
               </>
             }
@@ -86,7 +95,7 @@ const Card: React.FC<CardProps> = ({ data }) => {
             href={ownerInfo.whatsApp}
             title={
               <>
-                <TelegramSvg />
+                <TelegramSvg color="#1084EF" />
                 <span>Telegram</span>
               </>
             }

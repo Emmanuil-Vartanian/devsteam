@@ -9,6 +9,7 @@ export const TopCardInfo = styled('div')`
   margin-bottom: 16px;
   padding-bottom: 40px;
   border-bottom: 1px solid #e2e2e2;
+  cursor: pointer;
 `
 
 export const CardImageBlock = styled('div')(
@@ -143,7 +144,7 @@ export const OwnerContacts = styled('div')(
     :first-of-type {
       color: #00a11a;
     }
-    :nth-0f-type(2n) {
+    :nth-of-type(2n) {
       color: #1084ef;
     }
   }

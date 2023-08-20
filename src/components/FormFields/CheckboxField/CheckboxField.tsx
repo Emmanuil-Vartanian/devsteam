@@ -2,20 +2,23 @@ import React, { useState } from 'react'
 import FormGroup from '@mui/material/FormGroup'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Checkbox from '@mui/material/Checkbox'
+import { useTranslation } from 'react-i18next'
 
 type OptionsType = {
   name: string
-  label: string
   checked: boolean
 }
 
 interface CheckboxFieldProps {
   options: OptionsType[]
+  label: string
   onChange: (data) => void
 }
 
 const CheckboxField: React.FC<CheckboxFieldProps> = props => {
-  const { options, onChange } = props
+  const { t } = useTranslation()
+
+  const { options, label, onChange } = props
 
   const handleChange = event => {
     const checked = event.target.checked
@@ -28,15 +31,13 @@ const CheckboxField: React.FC<CheckboxFieldProps> = props => {
 
   return (
     <FormGroup {...props}>
-      {options.map(({ name, label, checked }, index) => {
-        return (
-          <FormControlLabel
-            key={index}
-            control={<Checkbox name={name} checked={checked} onChange={handleChange} />}
-            label={label}
-          />
-        )
-      })}
+      {options.map(({ name, checked }, index) => (
+        <FormControlLabel
+          key={index}
+          control={<Checkbox name={name} checked={checked} onChange={handleChange} />}
+          label={t(`${label}.${name}`)}
+        />
+      ))}
     </FormGroup>
   )
 }

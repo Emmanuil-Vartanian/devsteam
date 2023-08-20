@@ -4,6 +4,7 @@ import CheckboxField from 'components/FormFields/CheckboxField'
 
 export const ContactFormBlock = styled('div')`
   margin-right: 16px;
+  width: 100%;
 `
 
 export const ContactFormImagesBlock = styled('div')`
@@ -11,7 +12,9 @@ export const ContactFormImagesBlock = styled('div')`
   margin-top: 9px;
   > div {
     width: min-content;
-    margin-right: 16px;
+    :first-of-type {
+      margin-right: 16px;
+    }
     > img:first-of-type {
       margin-bottom: 9px;
     }
@@ -22,6 +25,9 @@ export const FormFieldBlock = styled('div')`
   margin-top: 40px;
   > div:not(:last-child) {
     margin-bottom: 24px;
+    > div {
+      max-width: 574px;
+    }
   }
 `
 
