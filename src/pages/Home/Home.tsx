@@ -21,6 +21,7 @@ const Home: React.FC = () => {
   }
 
   const scrollToBlock = (block = '') => {
+    console.log('object')
     const locationName = block.length > 1 ? block.replace('/', '') : block
     blocks[locationName].current.scrollIntoView({ behavior: 'smooth' })
   }
